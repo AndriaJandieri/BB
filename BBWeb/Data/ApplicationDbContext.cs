@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BBWeb.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BBWeb.Data
 {
@@ -10,6 +11,6 @@ namespace BBWeb.Data
 
         }
 
-
+        public DbSet<Category> Categories { get; set; }
     }
 }
