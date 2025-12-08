@@ -7,7 +7,7 @@ namespace BBWeb.Controllers
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _db;
-        public static string OldCategoryName;
+        public static string? OldCategoryName;
         public CategoryController(ApplicationDbContext db)
         {
             _db = db;
