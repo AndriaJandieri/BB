@@ -7,6 +7,7 @@ namespace BBWeb.Controllers
     public class CategoryController : Controller
     {
         private readonly ApplicationDbContext _db;
+        public static string OldCategoryName;
         public CategoryController(ApplicationDbContext db)
         {
             _db = db;
@@ -40,6 +41,7 @@ namespace BBWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = $"Category <u><b>{obj.Name}</b></u> created successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
@@ -57,10 +59,13 @@ namespace BBWeb.Controllers
             //Category? categoryFromDb2 = _db.Categories.FirstOrDefault(u => u.Id == id);
             //Category? categoryFromDb3 = _db.Categories.Where(u => u.Id == id).FirstOrDefault();
 
+
             if (categoryFromDb == null)
             {
                 return NotFound();
             }
+
+            OldCategoryName = categoryFromDb.Name;
             return View(categoryFromDb);
         }
 
@@ -71,14 +76,16 @@ namespace BBWeb.Controllers
             if (ModelState.IsValid)
             {
                 _db.Categories.Update(obj);
+
+
                 _db.SaveChanges();
+                TempData["success"] = $"Category <u><b>{OldCategoryName}</b></u> updated to <u><b>{obj.Name}</b></u> successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
 
         }
         #endregion
-
         #region Delete
         public IActionResult Delete(int? id)
         {
@@ -116,6 +123,7 @@ namespace BBWeb.Controllers
             }
             _db.Categories.Remove(obj);
             _db.SaveChanges();
+            TempData["success"] = $"Category <u><b>{obj.Name}</b></u> deleted successfully";
             return RedirectToAction("Index", "Category");
         }
         #endregion
