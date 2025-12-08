@@ -29,6 +29,11 @@ namespace BBWeb.Controllers
                 ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Name.");
             }
 
+            if (obj.Name != null && obj.Name.ToLower() == "test")
+            {
+                ModelState.AddModelError("", "The Name cannot be 'test'.");
+            }
+
             if (ModelState.IsValid)
             {
                 _db.Categories.Add(obj);
