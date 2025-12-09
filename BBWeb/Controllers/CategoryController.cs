@@ -41,7 +41,8 @@ namespace BBWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
-                TempData["success"] = $"Category <u><b>{obj.Name}</b></u> created successfully";
+                //TempData["success"] = $"Category <u><b>{obj.Name}</b></u> created successfully";
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
@@ -79,7 +80,8 @@ namespace BBWeb.Controllers
 
 
                 _db.SaveChanges();
-                TempData["success"] = $"Category <u><b>{OldCategoryName}</b></u> updated to <u><b>{obj.Name}</b></u> successfully";
+                //TempData["success"] = $"Category <u><b>{OldCategoryName}</b></u> updated to <u><b>{obj.Name}</b></u> successfully";
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
@@ -123,7 +125,8 @@ namespace BBWeb.Controllers
             }
             _db.Categories.Remove(obj);
             _db.SaveChanges();
-            TempData["success"] = $"Category <u><b>{obj.Name}</b></u> deleted successfully";
+            //TempData["success"] = $"Category <u><b>{obj.Name}</b></u> deleted successfully";
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index", "Category");
         }
         #endregion
