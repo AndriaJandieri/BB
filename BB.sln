@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWeb", "BBWeb\BBWeb.csproj", "{A56B6FCF-EE0D-414C-8362-60EAC6F0ADDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BB_Razor", "BB_Razor\BB_Razor.csproj", "{1D0B9AA3-773F-416F-A554-F1F8F8A0C3C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A56B6FCF-EE0D-414C-8362-60EAC6F0ADDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A56B6FCF-EE0D-414C-8362-60EAC6F0ADDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A56B6FCF-EE0D-414C-8362-60EAC6F0ADDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D0B9AA3-773F-416F-A554-F1F8F8A0C3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D0B9AA3-773F-416F-A554-F1F8F8A0C3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D0B9AA3-773F-416F-A554-F1F8F8A0C3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D0B9AA3-773F-416F-A554-F1F8F8A0C3C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
