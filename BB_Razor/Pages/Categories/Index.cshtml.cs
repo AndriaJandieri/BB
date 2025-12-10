@@ -3,6 +3,7 @@ using BB_Razor.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+
 namespace BB_Razor.Pages.Categories
 {
     public class IndexModel : PageModel
